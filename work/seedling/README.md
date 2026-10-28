@@ -6,6 +6,20 @@ A minimal native torrent client for macOS, built with SwiftUI and a private Tran
 
 Apple Silicon Mac running macOS 14 or later. This development build is locally signed, but it is not notarized or signed with a Developer ID for public distribution.
 
+## Install and first launch
+
+Download **Seedling-macOS.dmg** from [GitHub Releases](https://github.com/ilmirfan/seedling/releases), open it, and drag Seedling to Applications.
+
+If macOS blocks this development build, first try opening Seedling, then go to **System Settings → Privacy & Security → Open Anyway**. Only allow a build you trust. See [Apple's instructions](https://support.apple.com/en-gb/102445).
+
+Alternatively, if you trust the downloaded build, run this command in Terminal after copying it to Applications:
+
+```sh
+xattr -dr com.apple.quarantine "/Applications/Seedling.app"
+```
+
+This removes the quarantine attribute from Seedling and its contents, bypassing the quarantine-based first-launch protection for this app. It does not sign or notarize the app. Keep the full app path shown above; targeting `/Applications/` would affect every app in that folder. Each user must allow the app on their own Mac.
+
 ## Use
 
 Open Seedling.app. Click **Add download** or press Command-N to paste a magnet link. Use Command-O to choose .torrent files, or drag files and magnet links onto the window. The app declares support for magnet URLs and .torrent files; it does not replace your existing default torrent app. Finder's Open With menu can open a .torrent in Seedling.
