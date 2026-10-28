@@ -1,0 +1,23 @@
+# macOS and Python caches
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Packaged releases and generated builds
+/outputs/
+/work/seedling/build/
+/work/seedling/legacy-release/
+
+# Downloaded engine dependencies (retain upstream metadata)
+/work/seedling/engine/*
+!/work/seedling/engine/UPSTREAM.json
+
+# Local test state, downloaded payloads, and generated reports
+/work/seedling/test-data/
+/work/seedling/test-run/
+/work/seedling/ui-data/
+/work/seedling/migration-tests/
+/work/seedling/artwork-test-cache/
+/work/seedling/*test-results.txt
+/work/seedling/pre-migration-checksums.json
+/work/seedling/animation-frame.png
